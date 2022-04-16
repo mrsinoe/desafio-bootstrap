@@ -1,0 +1,60 @@
+/* Variables generales */
+
+:root {
+    --principal_color: #787DFF;
+    --secundario_color: #FE7826;
+  }
+
+/* En CSS, ::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad content. Este elemento se muestra en línea con el texto de forma predeterminada.   https://developer.mozilla.org/es/docs/Web/CSS/::before*/
+
+/* agregamos este elemento con la pseudo clase ::before para agregar un "aire" de 60px al inicio del body y evitar que el heder tape imagenes del Hero Content */
+
+body::before {
+    display: block;
+    content: "";
+    height: 60px;
+}
+
+/* Utilitatios */
+
+.bg-principal{
+    background-color: var(--principal_color);
+}
+
+.bg-secundario{
+    background-color: var(--secundario_color);
+}
+
+.text-secundario{
+    color: var(--secundario_color);
+}
+
+/* Animaciones con AnimateCSS */
+
+.animacionHero1{
+    animation:slideInLeft;
+    animation-duration:.8s;
+}
+
+.animacionHero2{
+    animation:slideInRight;
+    animation-duration:.8s;
+}
+
+
+@media (min-width: 768px) {
+    .news-input{
+        width: 50%;
+
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .animacionHero1{
+        animation:bounce;
+        animation-duration:.8s;
+    }
+
+}
